@@ -1,23 +1,32 @@
 <!doctype html>
-<link rel="stylesheet" href="../assets/styles.css" />
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Experience | Pedro Correia</title>
-  <link rel="stylesheet" href="/assets/styles.css" />
+
+  <!-- experience/ is 1 folder deep -->
+  <link rel="stylesheet" href="../assets/styles.css" />
 </head>
+
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
+
   <header>
     <div class="container header-inner">
-      <a class="brand" href="/"><span class="brand-mark"></span><span>Pedro Correia</span></a>
+      <!-- go back to homepage -->
+      <a class="brand" href="../">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Pedro Correia</span>
+      </a>
+
       <nav aria-label="Primary">
         <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Menu</button>
         <ul id="nav-menu" class="nav-menu">
-          <li><a data-nav href="/interests/supply-chain/">Interests</a></li>
-          <li><a data-nav href="/hobbies/">Hobbies</a></li>
-          <li><a data-nav href="/thesis/">Thesis</a></li>
+          <li><a href="../experience/">Experience</a></li>
+          <li><a href="../interests/supply-chain/">Interests</a></li>
+          <li><a href="../hobbies/">Hobbies</a></li>
+          <li><a href="../thesis/">Thesis</a></li>
           <li><a class="pill" href="mailto:P02.correia@gmail.com">Contact</a></li>
         </ul>
       </nav>
@@ -25,7 +34,7 @@
   </header>
 
   <main id="content" class="container">
-    <div class="breadcrumbs"><a href="/">Home</a> / Experience</div>
+    <div class="breadcrumbs"><a href="../">Home</a> / Experience</div>
 
     <section class="section">
       <h1>Experience</h1>
@@ -73,8 +82,7 @@
 
     <div class="footer">© <span id="year"></span> Pedro Correia</div>
   </main>
-  <a class="brand" href="../../">Pedro Correia</a>
 
-  <script src="..  /assets/site.js"></script>
+  <script src="../assets/site.js"></script>
 </body>
 </html>
