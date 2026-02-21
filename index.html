@@ -5,33 +5,34 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="Pedro Correia — Industrial Engineering & Management. Supply Chain, Process Improvement, Project Management, Sales." />
   <title>Pedro Correia | Portfolio CV</title>
+
+  <!-- Use RELATIVE paths on GitHub Pages for reliability -->
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
+
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
 
   <header>
     <div class="container header-inner">
-      <a class="brand" href="/">
+      <!-- Keep ONLY ONE brand link (you had two). Use ./ so it always goes to homepage -->
+      <a class="brand" href="./">
         <span class="brand-mark" aria-hidden="true"></span>
         <span>Pedro Correia</span>
       </a>
-      <a class="brand" href="./">Pedro Correia</a>
-      
-      <nav>
-        <a href="experience/">Experience</a>
-        <a href="interests/">Interests</a>
-        <a href="hobbies/">Hobbies</a>
-        <a href="thesis/">Thesis</a>
-      </nav>
+
+      <!-- FIXED: HTML comment syntax is <!-- ... --> (no space after <! ) -->
       <nav aria-label="Primary">
         <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+
+        <!-- FIXED: close <li> tags (missing before). Use RELATIVE links (no leading /) -->
         <ul id="nav-menu" class="nav-menu">
-          <li><a data-nav href="/experience/">Experience</a>
-          <li><a data-nav href="/interests/supply-chain/">Interests</a>
-          <li><a data-nav href="/hobbies/">Hobbies</a>
-          <li><a class="pill" href="/thesis/">Thesis</a>
-          <li><a class="pill" href="mailto:P02.correia@gmail.com">Contact</a>
+          <li><a data-nav href="experience/">Experience</a></li>
+          <!-- If you have interests/index.html use interests/; otherwise keep supply-chain directly -->
+          <li><a data-nav href="interests/supply-chain/">Interests</a></li>
+          <li><a data-nav href="hobbies/">Hobbies</a></li>
+          <li><a class="pill" href="thesis/">Thesis</a></li>
+          <li><a class="pill" href="mailto:P02.correia@gmail.com">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -40,28 +41,30 @@
   <main id="content" class="container">
     <section class="hero">
       <p class="kicker">MSc Industrial Engineering & Management · Copenhagen</p>
-      <h1>Structured, hands-on, and obsessed with improving how work flows.</h1>
+      <h1>Structured, hands-on, and obsessed with improving and optimizing workflows.</h1>
       <p class="lead">
         I combine operations experience with process improvement and project coordination. I like roles where I can
         execute in reality, measure what’s happening, and improve the system — fast.
       </p>
 
+      <!-- FIXED: make links RELATIVE so they work on GitHub Pages -->
       <div class="btn-row">
-        <a class="btn primary" href="/thesis/">Read thesis project</a>
-        <a class="btn" href="/experience/">See experience</a>
-        <a class="btn" href="/interests/supply-chain/">Explore interests</a>
+        <a class="btn primary" href="thesis/">AI Optimization project</a>
+        <a class="btn" href="experience/">Experience</a>
+        <a class="btn" href="interests/supply-chain/">Interests</a>
       </div>
 
+      <!-- These are not links (chips). If you want them clickable, wrap in <a> tags -->
       <div class="chips">
-        <span class="chip">Supply Chain</span>
-        <span class="chip">Process Improvement</span>
-        <span class="chip">Project Management</span>
-        <span class="chip">Sales / Stakeholders</span>
+        <a class="chip" href="interests/supply-chain/">Supply Chain</a>
+        <a class="chip" href="interests/process-improvement/">Process Improvement</a>
+        <a class="chip" href="interests/project-management/">Project Management</a>
+        <a class="chip" href="interests/sales/">Sales / Stakeholders</a>
       </div>
     </section>
 
     <section class="section">
-      <h2>Featured: Master’s thesis (interactive summary)</h2>
+      <h2>Featured: AI Optimization project (summary)</h2>
       <div class="grid">
         <div class="card">
           <h3 class="card-title">What I built</h3>
@@ -71,7 +74,7 @@
             <li>Validated value with testing results (cost & cycle time reduction).</li>
           </ul>
           <div class="btn-row">
-            <a class="btn primary" href="/thesis/">Open thesis page</a>
+            <a class="btn primary" href="thesis/">Open thesis page</a>
           </div>
         </div>
 
@@ -82,7 +85,7 @@
             and communicate it clearly to stakeholders.
           </p>
           <div class="btn-row">
-            <a class="btn full" href="/experience/">How it connects to my roles</a>
+            <a class="btn full" href="experience/">How it connects to my roles</a>
           </div>
         </aside>
       </div>
@@ -91,15 +94,26 @@
     <section class="section">
       <h2>Navigate</h2>
       <div class="cols-3">
-        <div class="card tile"><a href="/experience/">
-          <h3>Experience</h3><p>Timeline + key responsibilities + impact highlights.</p>
-        </a></div>
-        <div class="card tile"><a href="/interests/supply-chain/">
-          <h3>Interests</h3><p>Supply chain · PM · Process improvement · Sales — separated for clarity.</p>
-        </a></div>
-        <div class="card tile"><a href="/hobbies/">
-          <h3>Hobbies</h3><p>Personality + interests that match team culture and lifestyle.</p>
-        </a></div>
+        <div class="card tile">
+          <a href="experience/">
+            <h3>Experience</h3>
+            <p>Timeline + key responsibilities + impact highlights.</p>
+          </a>
+        </div>
+
+        <div class="card tile">
+          <a href="interests/supply-chain/">
+            <h3>Interests</h3>
+            <p>Supply chain · PM · process improvement · sales — separated for clarity.</p>
+          </a>
+        </div>
+
+        <div class="card tile">
+          <a href="hobbies/">
+            <h3>Hobbies</h3>
+            <p>Personality + interests that match team culture and lifestyle.</p>
+          </a>
+        </div>
       </div>
 
       <div class="footer">
@@ -108,6 +122,7 @@
     </section>
   </main>
 
-  <script src="/assets/site.js"></script>
+  <!-- FIXED: use RELATIVE JS path from homepage -->
+  <script src="assets/site.js"></script>
 </body>
 </html>
