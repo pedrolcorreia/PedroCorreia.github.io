@@ -6,8 +6,37 @@
   <meta name="description" content="Pedro Correia — Industrial Engineering & Management. Supply Chain, Process Improvement, Project Management, Sales." />
   <title>Pedro Correia | Portfolio CV</title>
 
-  <!-- Use RELATIVE paths on GitHub Pages for reliability -->
+  <!-- Your existing stylesheet -->
   <link rel="stylesheet" href="assets/styles.css" />
+
+  <!-- ADD: photo wrap styles (works even if styles.css doesn't have them) -->
+  <style>
+    .profile-photo{
+      float: right;
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 999px;
+      margin: 0 0 16px 28px;
+      border: 1px solid rgba(255,255,255,.15);
+      box-shadow: 0 18px 40px rgba(0,0,0,.35);
+    }
+    @media (max-width: 860px){
+      .profile-photo{
+        float: none;
+        display: block;
+        margin: 0 auto 18px auto;
+        width: 160px;
+        height: 160px;
+      }
+    }
+    /* ensures the hero section contains the floated image properly */
+    .hero::after{
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
 </head>
 
 <body>
@@ -15,20 +44,16 @@
 
   <header>
     <div class="container header-inner">
-      <!-- Keep ONLY ONE brand link (you had two). Use ./ so it always goes to homepage -->
       <a class="brand" href="./">
         <span class="brand-mark" aria-hidden="true"></span>
         <span>Pedro Correia</span>
       </a>
 
-      <!-- FIXED: HTML comment syntax is <!-- ... -->
       <nav aria-label="Primary">
         <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Menu</button>
 
-        <!-- FIXED: close <li> tags (missing before). Use RELATIVE links (no leading /) -->
         <ul id="nav-menu" class="nav-menu">
           <li><a data-nav href="experience/">Experience</a></li>
-          <!-- If you have interests/index.html use interests/; otherwise keep supply-chain directly -->
           <li><a data-nav href="interests/">Interests</a></li>
           <li><a data-nav href="hobbies/">Hobbies</a></li>
           <li><a class="pill" href="thesis/">AI Optimization</a></li>
@@ -42,27 +67,29 @@
     <section class="hero">
       <p class="kicker">MSc Industrial Engineering & Management · Copenhagen</p>
 
-<img
-  src="assets/profile.png"
-  alt="Pedro Correia"
-  class="profile-photo"
-/>
+      <img
+        src="assets/profile.png"
+        alt="Pedro Correia"
+        class="profile-photo"
+        width="220"
+        height="220"
+        loading="lazy"
+      />
 
-<h1>Structured, hands-on, and obsessed with improving and optimizing workflows.</h1>
+      <h1>Structured, hands-on, and obsessed with improving and optimizing workflows.</h1>
 
-<p class="lead">
-  I combine operations experience with process improvement and project coordination.
-  I like roles where I can execute in reality, measure what’s happening, and improve
-  the system — fast.
-</p>
-      <!-- FIXED: make links RELATIVE so they work on GitHub Pages -->
+      <p class="lead">
+        I combine operations experience with process improvement and project coordination.
+        I like roles where I can execute in reality, measure what’s happening, and improve
+        the system — fast.
+      </p>
+
       <div class="btn-row">
         <a class="btn primary" href="thesis/">AI Optimization project</a>
         <a class="btn" href="experience/">Experience</a>
         <a class="btn" href="interests/">Interests</a>
       </div>
 
-      <!-- These are not links (chips). If you want them clickable, wrap in <a> tags -->
       <div class="chips">
         <a class="chip" href="interests/supply-chain/">Supply Chain</a>
         <a class="chip" href="interests/process-improvement/">Process Improvement</a>
@@ -110,7 +137,7 @@
         </div>
 
         <div class="card tile">
-          <a href="interests/supply-chain/">
+          <a href="interests/">
             <h3>Interests</h3>
             <p>Supply chain · PM · process improvement · sales — separated for clarity.</p>
           </a>
@@ -130,7 +157,6 @@
     </section>
   </main>
 
-  <!-- FIXED: use RELATIVE JS path from homepage -->
   <script src="assets/site.js"></script>
 </body>
 </html>
