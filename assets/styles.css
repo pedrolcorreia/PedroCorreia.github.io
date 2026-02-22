@@ -229,3 +229,23 @@ h1{margin: 10px 0 12px; font-size: clamp(28px, 3.2vw, 44px); line-height:1.12}
     height:160px;
   }
 }
+
+.profile-photo{
+  float: right;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 0 16px 32px;
+  border: 1px solid rgba(255,255,255,.15);
+  box-shadow: 0 20px 40px rgba(0,0,0,.35);
+}
+
+/* Mobile adjustment */
+@media (max-width: 860px){
+  .profile-photo{
+    float: none;
+    display: block;
+    margin: 0 auto 24px auto;
+  }
+}
