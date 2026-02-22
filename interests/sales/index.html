@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sales | Pedro Correia</title>
 
-  <!-- Two folders deep -->
-  <link rel="stylesheet" href="../../assets/styles.css" />
+  <!-- Use ROOT path (guaranteed to load CSS) -->
+  <link rel="stylesheet" href="/assets/styles.css" />
 </head>
 
 <body>
@@ -14,7 +14,7 @@
 
   <header>
     <div class="container header-inner">
-      <a class="brand" href="../../">
+      <a class="brand" href="/">
         <span class="brand-mark"></span>
         <span>Pedro Correia</span>
       </a>
@@ -22,10 +22,10 @@
       <nav aria-label="Primary">
         <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Menu</button>
         <ul id="nav-menu" class="nav-menu">
-          <li><a data-nav href="../../experience/">Experience</a></li>
-          <li><a data-nav href="../../interests/">Interests</a></li>
-          <li><a data-nav href="../../hobbies/">Hobbies</a></li>
-          <li><a data-nav href="../../thesis/">AI Optimization</a></li>
+          <li><a data-nav href="/experience/">Experience</a></li>
+          <li><a data-nav href="/interests/">Interests</a></li>
+          <li><a data-nav href="/hobbies/">Hobbies</a></li>
+          <li><a data-nav href="/thesis/">AI Optimization</a></li>
           <li><a class="pill" href="mailto:P02.correia@gmail.com">Contact</a></li>
         </ul>
       </nav>
@@ -34,7 +34,7 @@
 
   <main id="content" class="container">
     <div class="breadcrumbs">
-      <a href="../../">Home</a> / Interests / Sales
+      <a href="/">Home</a> / Interests / Sales
     </div>
 
     <section class="section">
@@ -109,21 +109,21 @@
 
       <div class="cols-3">
         <div class="card tile">
-          <a href="../supply-chain/">
+          <a href="/interests/supply-chain/">
             <h3>Supply Chain</h3>
             <p>Flow, constraints, warehouse operations.</p>
           </a>
         </div>
 
         <div class="card tile">
-          <a href="../project-management/">
+          <a href="/interests/project-management/">
             <h3>Project Management</h3>
             <p>Structure, planning, stakeholders.</p>
           </a>
         </div>
 
         <div class="card tile">
-          <a href="../process-improvement/">
+          <a href="/interests/process-improvement/">
             <h3>Process Improvement</h3>
             <p>Lean thinking, measurement, change.</p>
           </a>
@@ -137,7 +137,7 @@
     </div>
   </main>
 
-  <!-- Two folders deep -->
-  <script src="../../assets/site.js"></script>
+  <!-- Use ROOT path -->
+  <script src="/assets/site.js"></script>
 </body>
 </html>
